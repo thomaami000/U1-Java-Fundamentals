@@ -1,3 +1,5 @@
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.text.DecimalFormat;  //importing the class from the package
 
 public class L7{
@@ -23,5 +25,20 @@ public class L7{
 
         //using the roundTo2 object to call the format method from the DecimalFormat class.
         System.out.println("The number rounded to 3 decimals is " + roundTo3.format(number));
+
+
+         DecimalFormat currency = new DecimalFormat("$#,###.00");
+        System.out.println("The money I have is " + currency.format(number));
+        System.out.println("The money I have is " + currency.format(123456789.5658));
+
+        DecimalFormat percentage = new DecimalFormat("##%");
+        System.out.println("Sales tax is: " + percentage.format(0.07));
+
+        DecimalFormat crazy = new DecimalFormat("THIS IS JUST LOTSA MONIES $#,###.00");
+        System.out.println(crazy.format(1234456789.235694));
+
+
+
+
     }
 }
